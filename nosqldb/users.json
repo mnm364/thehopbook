@@ -1,0 +1,41 @@
+{
+  "jeff": {
+    "birthday": "01/01/01",
+    "concentration": "Computer Science",
+    "email": "hi@aol.com",
+    "firstName": "Jeff",
+    "lastName": "Sham",
+    "picture": "jeff.jpg",
+    "relationship": "single",
+    "school": "Johns Hopkins",
+    "sex": "Male",
+    "status": "Alumnus",
+    "username": "jeff"
+  },
+  "jeff2": {
+    "birthday": "01/01/01",
+    "concentration": "Computer Science",
+    "email": "hi@aol.com",
+    "firstName": "Jeff2",
+    "lastName": "Sham",
+    "picture": "jeff.jpg",
+    "relationship": "single",
+    "school": "Johns Hopkins",
+    "sex": "Male",
+    "status": "Alumnus",
+    "username": "jeff2"
+  },
+  "mike": {
+    "birthday": "01/01/01",
+    "concentration": "Computer Science",
+    "email": "hi@aol.com",
+    "firstName": "Michael",
+    "lastName": "Miller",
+    "picture": "mike.jpg",
+    "relationship": "single (and ready to mingle)",
+    "school": "Johns Hopkins",
+    "sex": "Male",
+    "status": "Alumnus",
+    "username": "mike"
+  }
+}
