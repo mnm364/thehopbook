@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block title %}Profile{% endblock %}
+
+{% block content %}
+
+<div class="block" id="pic">
+	<div class="title">
+		Profile Picture
+	</div>
+	<div class="content">
+		{% if user.picture is defined %}
+			<img src="{{ url_for('static', filename='images/group.jpg') }}"
+				 alt="Picture of {{user.name | default('the user')}}"
+				 width="240"
+			/>
+		{% else %}
+			Upload a picture!
+		{% endif %}
+	</div>
+</div>
+
+<div class="block" id="friends">
+	<div class="title">
+		Friends
+	</div>
+	<div class="content">
+		{% if user.friends is defined %}
+			{{ ','.join(user.friends) }}
+		{% else %}
+			You have no friends :'(
+		{% endif %}
+	</div>
+</div>
+
+<div class="block" id="info">
+	<div class="title">
+		Basic Information
+	</div>
+
+	<div class="content">
+		{%
+			set to_display = [
+				'name',
+				'sex',
+				'school',
+				'concentration',
+				'status',
+				'birthday',
+				'email'
+			]
+		%}
+
+		<table>
+		{% for label in to_display if label in user %}
+			<tr>
+				<td>{{ label.title() }}:</td>
+				<td>{{ user[label] }}</td>
+			</tr>
+		{% endfor %}
+		</table>
+	</div>
+</div>
+
+{% endblock %}

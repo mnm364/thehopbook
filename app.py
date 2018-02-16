@@ -1,13 +1,11 @@
-from flask import Flask, jsonify, request
-import simplejson as json
-
+from flask import Flask, jsonify, request, render_template, json
 app = Flask(__name__)
 
 SUCCESS = json.dumps({'success':True}), 200, {'ContentType':'application/json'}
 
 @app.route('/')
 def index():
-    return 'Welcome to [thehopbook]'
+    return render_template('login.html')
 
 @app.route('/user/<username>', methods=['GET'])
 def display_user(username):
@@ -15,7 +13,8 @@ def display_user(username):
         user = json.loads(f.read()).get(username)
         friends = json.loads(g.read()).get(username, [])
         user['friends'] = friends
-        return jsonify(user)
+        # return jsonify(user)
+        return render_template('profile.html', user=user)
 
 @app.route('/user/<username>', methods=['POST'])
 def create_user(username):
