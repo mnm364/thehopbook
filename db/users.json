@@ -35,6 +35,18 @@
     "status": "Alumnus",
     "username": "jeff2"
   },
+  "lourenco": {
+    "concentration": "test",
+    "email": "lolo@gmail.com",
+    "name": "Lawrence Wolf-Sonkin",
+    "password": "test",
+    "picture_filename": "lourenco.jpg",
+    "relationship": "test",
+    "school": "test",
+    "sex": "test",
+    "status": "test",
+    "username": "lourenco"
+  },
   "mike": {
     "birthday": "01/01/01",
     "concentration": "Computer Science",
