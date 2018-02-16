@@ -3,64 +3,72 @@
 
 {% block content %}
 
+{% if current_user.is_authenticated and current_user.id != user.username %}
+<div id="navigation">
+  <a href="{{ url_for('user', username=current_user.id) }}">My Profile</a>
+</div>
+{% endif %}
+
 <div class="block" id="pic">
-	<div class="title">
-		Profile Picture
-	</div>
-	<div class="content">
-		{% if user.picture_filename is defined %}
-			<img
-				src="{{ url_for('static', filename='profilepics/' + user.picture_filename) }}"
-				 alt="Picture of {{user.name | default('the user')}}"
-				 width="240"
-			/>
-		{% else %}
-			Upload a picture!
-		{% endif %}
-	</div>
+  <div class="title">
+    Profile Picture
+  </div>
+  <div class="content">
+    {% if user.picture_filename is defined %}
+      <img
+        src="{{ url_for('static', filename='profilepics/' + user.picture_filename) }}"
+         alt="Picture of {{user.name | default('the user')}}"
+         width="240"
+      />
+    {% else %}
+      Upload a picture!
+    {% endif %}
+  </div>
 </div>
 
 <div class="block" id="friends">
-	<div class="title">
-		Friends
-	</div>
-	<div class="content">
-		{% if user.friends is defined %}
-			{{ ','.join(user.friends) }}
-		{% else %}
-			You have no friends :'(
-		{% endif %}
-	</div>
+  <div class="title">
+    Friends
+  </div>
+  <div class="content">
+    {% if user.friends is defined and user.friends | count > 0 %}
+      {% for friend in user.friends %}
+        <a href="{{ url_for('user', username=friend) }}">{{ friend }}</a>,
+      {% endfor %}
+    {% else %}
+      You have no friends :'(
+    {% endif %}
+  </div>
 </div>
 
 <div class="block" id="info">
-	<div class="title">
-		Basic Information
-	</div>
+  <div class="title">
+    Basic Information
+  </div>
 
-	<div class="content">
-		{%
-			set to_display = [
-				'name',
-				'sex',
-				'relationship',
-				'school',
-				'concentration',
-				'status',
-				'birthday',
-				'email'
-			]
-		%}
+  <div class="content">
+    {%
+      set to_display = [
+        'name',
+        'sex',
+        'relationship',
+        'school',
+        'concentration',
+        'status',
+        'birthday',
+        'email'
+      ]
+    %}
 
-		<table>
-		{% for label in to_display if label in user %}
-			<tr>
-				<td>{{ label.title() }}:</td>
-				<td>{{ user[label] }}</td>
-			</tr>
-		{% endfor %}
-		</table>
-	</div>
+    <table>
+    {% for label in to_display if label in user %}
+      <tr>
+        <td>{{ label.title() }}:</td>
+        <td>{{ user[label] }}</td>
+      </tr>
+    {% endfor %}
+    </table>
+  </div>
 </div>
 
 {% endblock %}

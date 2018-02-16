@@ -16,12 +16,13 @@
     "concentration": "Computer Science",
     "email": "hi@aol.com",
     "name": "Jeff Sham",
-    "picture": "jeff.jpg",
+    "picture_filename": "jeff.jpg",
     "relationship": "single",
     "school": "Johns Hopkins",
     "sex": "Male",
     "status": "Alumnus",
-    "username": "jeff"
+    "username": "jeff",
+    "password": "test"
   },
   "jeff2": {
     "birthday": "01/01/01",
@@ -57,7 +58,8 @@
     "school": "Johns Hopkins",
     "sex": "Male",
     "status": "Alumnus",
-    "username": "mike"
+    "username": "mike",
+    "password": "test"
   },
   "mikey": {
     "concentration": "MACHINE LEARNING",

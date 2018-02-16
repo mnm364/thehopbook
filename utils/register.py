@@ -1,6 +1,5 @@
-from db_helpers import readdb, writedb
-from flask_wtf import FlaskForm
 from wtforms import Form, BooleanField, StringField, PasswordField, validators
+from utils.db import readdb, writedb
 
 
 class RegistrationForm(Form):
