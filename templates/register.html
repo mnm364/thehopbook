@@ -1,0 +1,34 @@
+{% from "_formhelpers.html" import render_field %}
+
+{% extends "base.html" %}
+{% block title %}Sign Up{% endblock %}
+
+{% block content %}
+
+<form method=post>
+  <dl>
+	{% set fields = [
+			'username',
+			'email',
+			'password',
+			'confirm',
+			'name',
+			'sex',
+			'relationship',
+			'school',
+			'concentration',
+			'status',
+			'picture_filename',
+			'accept_tos'
+		]
+	%}
+
+	{% for field in fields if field in form %}
+		{{render_field(form[field]) }}
+	{% endfor %}
+
+  </dl>
+  <p><input type=submit value=Register>
+</form>
+
+{% endblock %}

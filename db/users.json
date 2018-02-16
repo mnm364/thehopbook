@@ -1,0 +1,74 @@
+{
+  "hello": {
+    "concentration": "test",
+    "email": "hello@aol.com",
+    "name": "Hello Friend",
+    "password": "test",
+    "picture": "picture",
+    "relationship": "single",
+    "school": "test",
+    "sex": "unknown",
+    "status": "test",
+    "username": "hello"
+  },
+  "jeff": {
+    "birthday": "01/01/01",
+    "concentration": "Computer Science",
+    "email": "hi@aol.com",
+    "name": "Jeff Sham",
+    "picture": "jeff.jpg",
+    "relationship": "single",
+    "school": "Johns Hopkins",
+    "sex": "Male",
+    "status": "Alumnus",
+    "username": "jeff"
+  },
+  "jeff2": {
+    "birthday": "01/01/01",
+    "concentration": "Computer Science",
+    "email": "hi@aol.com",
+    "name": "Jeff Sham",
+    "picture": "jeff.jpg",
+    "relationship": "single",
+    "school": "Johns Hopkins",
+    "sex": "Male",
+    "status": "Alumnus",
+    "username": "jeff2"
+  },
+  "mike": {
+    "birthday": "01/01/01",
+    "concentration": "Computer Science",
+    "email": "hi@aol.com",
+    "name": "Michael Miller",
+    "picture_filename": "mike.jpg",
+    "relationship": "single",
+    "school": "Johns Hopkins",
+    "sex": "Male",
+    "status": "Alumnus",
+    "username": "mike"
+  },
+  "mikey": {
+    "concentration": "MACHINE LEARNING",
+    "email": "mike@peven.org",
+    "name": "Mike Peven",
+    "password": "test",
+    "picture_filename": "mikey.jpg",
+    "relationship": "Single and ready to mingle",
+    "school": "Johns Hopkins",
+    "sex": "Male",
+    "status": "PhD Candidate",
+    "username": "mikey"
+  },
+  "test": {
+    "concentration": "test",
+    "email": "test@email.com",
+    "name": "test",
+    "password": "test",
+    "picture": "picture",
+    "relationship": "test",
+    "school": "test",
+    "sex": "test",
+    "status": "test",
+    "username": "test"
+  }
+}

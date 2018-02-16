@@ -8,8 +8,9 @@
 		Profile Picture
 	</div>
 	<div class="content">
-		{% if user.picture is defined %}
-			<img src="{{ url_for('static', filename='images/group.jpg') }}"
+		{% if user.picture_filename is defined %}
+			<img
+				src="{{ url_for('static', filename='profilepics/' + user.picture_filename) }}"
 				 alt="Picture of {{user.name | default('the user')}}"
 				 width="240"
 			/>
@@ -42,6 +43,7 @@
 			set to_display = [
 				'name',
 				'sex',
+				'relationship',
 				'school',
 				'concentration',
 				'status',
