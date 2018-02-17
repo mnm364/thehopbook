@@ -1,0 +1,53 @@
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/login.css') }}">
+
+{% from "_formhelpers.html" import render_field %}
+
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+
+{% block content %}
+
+	<div class="login-div">
+        <form method="post">
+            <dl>
+            {{ render_field(form.username) }}
+            {{ render_field(form.password) }}
+            </dl>
+            <p>
+                <input type="submit" value="Login">
+                        <a href="{{url_for('register')}}">Register</a>
+            </p>
+        </form>
+	</div>
+
+	<div class="login-info">
+        <div class="login-info-top-bar">
+            Welcome to Thehopbook!
+        </div>
+        <h1 id="welcome">
+        	Welcome to [thehopbook]
+        </h1>
+        <p>
+            [thehopbook] is an online directory that connects people through hackathons at colleges.
+        </p>
+        <p>
+            We have opened up [thehopbook] for popular consumption at <strong>HopHacks Spring 2018</strong>.
+        </p>
+        <p>
+            You can use [thehopbook] to:
+            <ul>
+                <li>Search for people at your hackathon</li>
+                <li>Find out who you're competing against</li>
+                <li>Look up your friends' friends</li>
+                <li>See a visualization of your hackathon network</li>
+                <li>But actually it does none of these things</li>
+                <li>Go build it!</li>
+	        </ul>
+        </p>
+		<p>
+    		To get started, click below to register. If you have already registered, you can log in.
+		</p>
+
+	</div>
+
+{% endblock%}

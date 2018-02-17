@@ -9,9 +9,13 @@ class RegistrationForm(Form):
         validators.EqualTo('confirm', message='Passwords must match')
     ])
     confirm = PasswordField('Repeat Password')
-
-    # TODO - add fields (name, sex, relationship, school, concentration,
-    #        status, picture_filename)
+    name = StringField('Name')
+    sex = StringField('Sex')
+    relationship = StringField('Relationship Status')
+    school = StringField('School')
+    concentration = StringField('Concentration')
+    status = StringField('Status')
+    picture_filename = StringField('Profile Photo Filename')
 
 def register_user(user):
     content = readdb('users')
