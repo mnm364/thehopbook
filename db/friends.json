@@ -3,6 +3,10 @@
     "mike"
   ],
   "mike": [
-    "jeff"
+    "jeff",
+    "kristin"
+  ],
+  "kristin": [
+  	"mike"
   ]
 }

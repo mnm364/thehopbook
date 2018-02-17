@@ -1,40 +1,28 @@
 {
-  "hello": {
-    "concentration": "test",
-    "email": "hello@aol.com",
-    "name": "Hello Friend",
-    "password": "test",
-    "picture": "picture",
-    "relationship": "single",
-    "school": "test",
-    "sex": "unknown",
-    "status": "test",
-    "username": "hello"
-  },
   "jeff": {
     "birthday": "01/01/01",
     "concentration": "Computer Science",
     "email": "hi@aol.com",
     "name": "Jeff Sham",
+    "password": "test",
     "picture_filename": "jeff.jpg",
     "relationship": "single",
     "school": "Johns Hopkins",
     "sex": "Male",
     "status": "Alumnus",
-    "username": "jeff",
-    "password": "test"
+    "username": "jeff"
   },
-  "jeff2": {
-    "birthday": "01/01/01",
-    "concentration": "Computer Science",
-    "email": "hi@aol.com",
-    "name": "Jeff Sham",
-    "picture": "jeff.jpg",
-    "relationship": "single",
-    "school": "Johns Hopkins",
-    "sex": "Male",
-    "status": "Alumnus",
-    "username": "jeff2"
+  "kristin": {
+    "concentration": "",
+    "email": "kris@yim.com",
+    "name": "Kristin Yim",
+    "password": "test",
+    "picture_filename": "kristin.jpg",
+    "relationship": "Single and ready to mingle",
+    "school": "jhu",
+    "sex": "female",
+    "status": "Student",
+    "username": "kristin"
   },
   "lourenco": {
     "concentration": "test",
@@ -53,13 +41,13 @@
     "concentration": "Computer Science",
     "email": "hi@aol.com",
     "name": "Michael Miller",
+    "password": "test",
     "picture_filename": "mike.jpg",
     "relationship": "single",
     "school": "Johns Hopkins",
     "sex": "Male",
     "status": "Alumnus",
-    "username": "mike",
-    "password": "test"
+    "username": "mike"
   },
   "mikey": {
     "concentration": "MACHINE LEARNING",

@@ -71,8 +71,6 @@ def user(username):
     user = readdb('users').get(username)
     friends = readdb('friends').get(current_user.id, [])
 
-    print('FRIENDS', friends)
-
     if user is None or (username != current_user.id and username not in friends):
         return unauthorized(None)
 
