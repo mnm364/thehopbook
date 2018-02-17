@@ -27,6 +27,10 @@ def page_not_found(e):
 def hello():
     return render_template('hello_child.html', value='Hello World')
 
+@app.route('/')
+def index():
+    return redirect('login')
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     form = LoginForm(request.form)

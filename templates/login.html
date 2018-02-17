@@ -21,14 +21,16 @@
             </dl>
             <p>
                 <input type="submit" value="Login">
-                        <a href="{{url_for('register')}}">Register</a>
             </p>
+        </form>
+        <form method="get" action="{{url_for('register')}}">
+            <button type="submit">Register</button>
         </form>
 	</div>
 
 	<div class="login-info">
         <div class="login-info-top-bar">
-            Welcome to Thehopbook!
+            Welcome to [thehopbook]!
         </div>
         <h1 id="welcome">
         	Welcome to [thehopbook]
