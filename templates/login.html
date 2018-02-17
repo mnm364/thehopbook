@@ -15,9 +15,11 @@
             </dl>
             <p>
                 <input type="submit" value="Login">
-                        <a href="{{url_for('register')}}">Register</a>
             </p>
         </form>
+		<form method="get" action="{{url_for('register')}}">
+    		<button type="submit">Register</button>
+		</form>
 	</div>
 
 	<div class="login-info">
@@ -45,7 +47,9 @@
 		<p>
     		To get started, click below to register. If you have already registered, you can log in.
 		</p>
-        
+        <form method="get" action="{{url_for('register')}}" style="text-align: center;">
+    		<button type="submit">Register</button>
+		</form>
 	</div>
 
 {% endblock%}
