@@ -2,7 +2,7 @@ from flask import Flask, jsonify, request, render_template, json, redirect, Sess
 from flask_login import login_user, logout_user, login_required, current_user, LoginManager
 from utils.db import readdb, writedb
 from utils.login import LoginForm, validate_user
-from utils.register import RegistrationForm, register_user
+from utils.register import RegistrationForm
 from models import User
 
 app = Flask(__name__)
@@ -68,9 +68,9 @@ def register():
 @login_required
 def user(username):
     user = readdb('users').get(username)
-    friends = readdb('friends').get(current_user.id, [])
+    current_user_friends = readdb('friends').get(current_user.id, [])
 
-    if user is None or (username != current_user.id and username not in friends):
+    if user is None or (username != current_user.id and username not in current_user_friends):
         return unauthorized(None)
 
     friends = readdb('friends').get(username, [])
@@ -89,7 +89,9 @@ def unauthorized(e):
 def create_user(username):
     user = request.get_json()
     user['username'] = username
-    register_user(user)
+    content = readdb('users')
+    content[user['username']] = user
+    writedb('users', content)
 
     return SUCCESS
 

@@ -18,7 +18,3 @@ class RegistrationForm(Form):
     status = StringField('Status')
     picture_filename = StringField('Profile Photo Filename')
 
-def register_user(user):
-    content = readdb('users')
-    content[user['username']] = user
-    writedb('users', content)
