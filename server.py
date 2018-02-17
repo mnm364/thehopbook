@@ -68,9 +68,9 @@ def register():
 @login_required
 def user(username):
     user = readdb('users').get(username)
-    friends = readdb('friends').get(current_user.id, [])
+    current_user_friends = readdb('friends').get(current_user.id, [])
 
-    if user is None or (username != current_user.id and username not in friends):
+    if user is None or (username != current_user.id and username not in current_user_friends):
         return unauthorized(None)
 
     friends = readdb('friends').get(username, [])
@@ -89,7 +89,9 @@ def unauthorized(e):
 def create_user(username):
     user = request.get_json()
     user['username'] = username
-    register_user(user)
+    content = readdb('users')
+    content[user['username']] = user
+    writedb('users', content)
 
     return SUCCESS
 
