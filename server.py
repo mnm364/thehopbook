@@ -54,10 +54,10 @@ def logout():
 def user(username):
     user = readdb('users').get(username)
 
-    if user is None:
-        return page_not_found(None)
+    current_user_friends = readdb('friends').get(current_user.id, [])
 
-    # TODO - authenticate permissions for user access to profiles
+    if user is None or (username != current_user.id and username not in current_user_friends):
+        return unauthorized(None)
 
     friends = readdb('friends').get(username, [])
     user['friends'] = friends
