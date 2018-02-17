@@ -10,7 +10,10 @@
 		{{ render_field(form.username) }}
 		{{ render_field(form.password) }}
 		</dl>
-        <p><input type="submit" value="Register"></p>
+        <p>
+        	<input type="submit" value="Login">
+					<a href="{{url_for('register')}}">Register</a>
+        </p>
 	</form>
 
 {% endblock%}
