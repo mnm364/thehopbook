@@ -26,8 +26,9 @@
   </div>
   <div class="content">
     {% if user.friends is defined and user.friends | count > 0 %}
-      <!-- TODO make friends lists a set of live links -->
-      {{ user.friends | join(',') }}
+      {% for friend in user.friends %}
+        <a href="{{ url_for('user', username=friend) }}">{{ friend }}</a>,
+      {% endfor %}
     {% else %}
       You have no friends :'(
     {% endif %}
