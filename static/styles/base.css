@@ -3,3 +3,34 @@
     border-color: #6E8CAD;
     border-width: thin;
 }
+
+#top_logo {
+    background-color: #3C5A96;
+    padding: 20px;
+    padding-bottom: 5px;
+    color: #568BD7;
+    margin: 0px;
+}
+
+#logout {
+    background-color: #3C5A96;
+    padding: 10px;
+}
+
+#logout a, a:link, a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+#footer {
+    background-color: #3C5A96;
+    padding: 20px;
+    padding-top: 5px;
+    color: #568BD7;
+    margin: 0px;
+}
+
+#footer a, a:link, a:visited {
+    color: white;
+    text-decoration: none;
+}
