@@ -40,3 +40,17 @@
     color: white;
     text-decoration: none;
 }
+
+#content a, a:link, a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+#content {
+    border-style: solid;
+    border-color: #6E8CAD;
+    border-width: thin;
+    overflow: hidden;
+    margin: 10px;
+    padding: 10px
+}
