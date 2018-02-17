@@ -1,0 +1,25 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    {% block head %}
+    <div>
+        <h1 id="top_logo">
+            [thehopbook]
+        </h1>
+    </div>
+    <title>{% block title %}{% endblock %} - [thehopbook]</title>
+    {% endblock %}
+</head>
+<body>
+    <div id="content">{% block content %}{% endblock %}</div>
+    <div id="footer">
+        {% block footer %}
+        <br>
+        &copy; Copyright 2018 by <a href="https://semester.ly">Semester.ly</a>.
+        <br>
+        <a href="https://github.com/mnm364/thehopbook">Source</a>.
+        {% endblock %}
+    </div>
+</body>
+</html>
