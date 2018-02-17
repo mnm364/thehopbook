@@ -17,10 +17,9 @@ def load_user(username):
 
 SUCCESS = json.dumps({'success':True}), 200, {'ContentType':'application/json'}
 
-
 @app.route('/')
 def index():
-    return render_template('login.html')
+    return redirect(url_for('login'))
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
