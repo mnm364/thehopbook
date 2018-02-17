@@ -1,0 +1,12 @@
+{
+  "jeff": [
+    "mike"
+  ],
+  "mike": [
+    "jeff",
+    "kristin"
+  ],
+  "kristin": [
+  	"mike"
+  ]
+}
