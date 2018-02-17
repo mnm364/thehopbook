@@ -3,7 +3,11 @@
 
 {% block content %}
 
-<!-- TODO return to profile if logged in -->
+{% if current_user.is_authenticated %}
+<div id="navigation">
+  <a href="{{ url_for('user', username=current_user.id) }}">My Profile</a>
+</div>
+{% endif %}
 
 <div>Not Found</div>
 {% endblock %}

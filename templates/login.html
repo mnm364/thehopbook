@@ -7,7 +7,11 @@
 
 {% block content %}
 
-<!-- TODO provide link back to your profile if this is not your profile -->
+    {% if current_user.is_authenticated and current_user.id != user.username %}
+        <div id="navigation">
+          <a href="{{ url_for('user', username=current_user.id) }}">My Profile</a>
+        </div>
+    {% endif %}
 
 	<div class="login-div">
         <form method="post">

@@ -12,7 +12,11 @@
     {% endblock %}
 </head>
 <body>
-    <!-- TODO logout if logged in  -->
+    {% if current_user.is_authenticated %}
+        <div id="logout">
+            <a href="{{ url_for('logout') }}">logout</a>
+        </div>
+    {% endif %}
 
     <div id="content">{% block content %}{% endblock %}</div>
     <div id="footer">
