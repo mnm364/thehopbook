@@ -72,5 +72,17 @@
     "sex": "test",
     "status": "test",
     "username": "test"
+  },
+  "testt": {
+    "concentration": "adsf",
+    "email": "tes@amil.",
+    "name": "hel",
+    "password": "test",
+    "picture_filename": "adsfas",
+    "relationship": "dfsa",
+    "school": "asdf",
+    "sex": "dsaf",
+    "status": "asdf",
+    "username": "testt"
   }
 }
