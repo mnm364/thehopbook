@@ -2,7 +2,7 @@ from flask import Flask, jsonify, request, render_template, json, redirect, Sess
 from flask_login import login_user, logout_user, login_required, current_user, LoginManager
 from utils.db import readdb, writedb
 from utils.login import LoginForm, validate_user
-from utils.register import RegistrationForm
+from utils.register import RegistrationForm, register_user
 from models import User
 
 app = Flask(__name__)
@@ -32,9 +32,6 @@ def login():
             return render_template('login.html', form=form)
 
         login_user(user)
-
-        if not current_user.is_authenticated:
-            return render_template('login.html', form=form)
 
         return redirect(url_for('user', username=user.id))
 
